@@ -1,28 +1,31 @@
 /* #region header */
 .header {
-  box-sizing: border-box;
-  height: 100vh;
-  background-image: url(/src/images/background/full-backgroundpng.png);
+  background-image: url(/src/images/background/Cover_photo.svg);
 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 85%;
+  background-position: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &__content {
+    box-sizing: border-box;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &__bottom {
     align-self: center;
     font-weight: 700;
-    padding: 0 20px;
     margin-bottom: 88px;
 
-    @media (min-width: 576px) {
+    @include on-tablet {
       font-size: 64px;
       font-weight: 700px;
       height: 64px;
       align-items: center;
+      margin-bottom: 130px;
     }
   }
 
@@ -35,10 +38,15 @@
     line-height: 100%;
     letter-spacing: -1.5px;
 
-    @media (min-width: 576px) {
+    @include on-tablet {
       font-size: 64px;
       font-weight: 700px;
       align-items: center;
+    }
+
+    @include on-desktop {
+      font-size: 80px;
+      align-self: center;
     }
   }
 
