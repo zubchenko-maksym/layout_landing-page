@@ -64,8 +64,8 @@
 
   &__value {
     align-self: flex-start;
-    margin: 0;
     text-decoration: none;
+    margin: 0;
 
     @include value-style;
   }
